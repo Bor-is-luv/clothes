@@ -13,10 +13,11 @@ from values import values, types
 
 import pyowm
 
-token = '660308305:AAG-0FberRD73c55u6obRVr__fj7LTsjWJM'
+import os
+
+token = os.environ.get('TELEGRAM_TOKEN', '')
 bot = telebot.TeleBot(token, threaded=False)
 
-token = '660308305:AAG-0FberRD73c55u6obRVr__fj7LTsjWJM'
 URL = 'https://api.telegram.org/bot' + token + '/'
 secret = ''
 url = 'https://3b3b95dc.ngrok.io' + secret
